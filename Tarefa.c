@@ -2,7 +2,78 @@
 /*2. Unidades de massa (quilograma, grama, tonelada)*/
 /*3. Unidades de volume (litro, mililitro, metros cúbicos)*/
 /*4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin)*/ 
-/*5. Unidades de velocidade (km/h, m/s, mph)*/
+/*5. Unidades de velocidade (km/h, m/s, mph)
+void exibirMenu(){
+    
+    printf("1. km/h\n");
+    printf("2. m/s\n");
+    printf("3. mph\n");
+  
+}
+
+float converterVelocidade(float valor, int uniOrigem, int uniDestino) {
+    
+    if (uniOrigem == uniDestino) return valor;
+
+    if(uniOrigem == 1){
+        if(uniDestino == 2){
+            return valor / 3.6; 
+        }else if(uniDestino == 3){
+            return valor / 1.609;
+        }else{
+            return 0.0;
+        }
+    }
+
+    if(uniOrigem == 2){
+        if(uniDestino == 1){
+            return valor * 3.6;
+        }else if (uniDestino == 3){
+            return valor * 2.237;
+        }else{
+            return 0.0;
+        }
+    }
+    if(uniOrigem == 3){
+        if(uniDestino == 1){
+            return valor * 1.609;
+        }else if(uniDestino == 2){
+            return valor / 2.237;
+        }else{
+            return 0.0;
+        }
+    }
+}
+
+
+int main(){   
+
+    float valor, resultado;
+    int unidadeOrigem, unidadeDestino;
+
+    printf("=== Conversor de Velocidade ===\n");
+    printf("Qual a unidade quer converter \n");
+    exibirMenu();
+    printf("Digite uma opcao: ");
+    scanf("%d", &unidadeOrigem);
+
+    printf("Digite o valor da velocidade: ");
+    scanf("%f", &valor);
+
+
+    printf("Converter para? \n");
+    exibirMenu();
+    printf("Digite uma opcao: ");
+    scanf("%d", &unidadeDestino);
+
+    resultado = converterVelocidade(valor, unidadeOrigem, unidadeDestino);
+
+    printf("Resultado: %.2f\n", resultado);
+    return 0;
+    
+}
+
+*/
 
 /*6- Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)*/
 #include <stdio.h>
