@@ -1,56 +1,45 @@
 #include <stdio.h>
 
 void exibirMenu(){
-    printf("Menu unidade de entrada:\n");
+    
     printf("1. km/h\n");
     printf("2. m/s\n");
     printf("3. mph\n");
-    printf("Digite sua escolha:\n");
+  
 }
 
 float converterVelocidade(float valor, int uniOrigem, int uniDestino) {
-    // Se as unidades de origem e destino forem iguais, retorna o valor original
+    
     if (uniOrigem == uniDestino) return valor;
 
-    switch (uniOrigem) {
-        case 1: // km/h
-            switch (uniDestino) {
-                case 2: // km/h para m/s
-                    return valor / 3.6;
-                case 3: // km/h para mph
-                    return valor / 1.609;
-                default:
-                    return 0.0; // Caso de erro
-            }
-            break;
-        
-        case 2: // m/s
-            switch (uniDestino) {
-                case 1: // m/s para km/h
-                    return valor * 3.6;
-                case 3: // m/s para mph
-                    return valor * 2.237;
-                default:
-                    return 0.0; // Caso de erro
-            }
-            break;
-
-        case 3: // mph
-            switch (uniDestino) {
-                case 1: // mph para km/h
-                    return valor * 1.609;
-                case 2: // mph para m/s
-                    return valor / 2.237;
-                default:
-                    return 0.0; // Caso de erro
-            }
-            break;
-
-        default:
-            return 0.0; 
+    if(uniOrigem == 1){
+        if(uniDestino == 2){
+            return valor / 3.6; 
+        }else if(uniDestino == 3){
+            return valor / 1.609;
+        }else{
+            return 0.0;
+        }
     }
 
-    return 0.0; 
+    if(uniOrigem == 2){
+        if(uniDestino == 1){
+            return valor * 3.6;
+        }else if (uniDestino == 3){
+            return valor * 2.237;
+        }else{
+            return 0.0;
+        }
+    }
+    if(uniOrigem == 3){
+        if(uniDestino == 1){
+            return valor * 1.609;
+        }else if(uniDestino == 2){
+            return valor / 2.237;
+        }else{
+            return 0.0;
+        }
+    }
 }
 
 
@@ -59,16 +48,19 @@ int main(){
     float valor, resultado;
     int unidadeOrigem, unidadeDestino;
 
-    printf("=== Conversor de Unidades de Velocidade ===\n");
+    printf("=== Conversor de Velocidade ===\n");
+    printf("Qual a unidade quer converter \n");
     exibirMenu();
+    printf("Digite uma opcao: ");
     scanf("%d", &unidadeOrigem);
 
     printf("Digite o valor da velocidade: ");
     scanf("%f", &valor);
 
 
-    printf("Converter  destino:\n");
+    printf("Converter para? \n");
     exibirMenu();
+    printf("Digite uma opcao: ");
     scanf("%d", &unidadeDestino);
 
     resultado = converterVelocidade(valor, unidadeOrigem, unidadeDestino);
