@@ -43,7 +43,7 @@ int main() {
     double valor, resultado;
 
     exibirMenu(); // Exibe o menu para o usuário escolher a unidade de entrada
-    scanf("%d", &unidadeEntrada); // Recebe a escolha da unidade de entrada
+    scanf("%d", &unidadeEntrada); // unidade de entrada
 
     printf("Digite o valor a ser convertido: ");
     scanf("%lf", &valor); // Recebe o valor a ser convertido
@@ -55,10 +55,10 @@ int main() {
     printf("Escolha: ");
     scanf("%d", &unidadeSaida); // Recebe a escolha da unidade de saída
 
-    // Realiza a conversão de acordo com as unidades escolhidas
+    // Realiza a conversão
     resultado = converterPotencia(valor, unidadeEntrada, unidadeSaida);
 
-    // Exibe o resultado ou uma mensagem de erro caso a conversão tenha falhado
+    // Exibe o resultado ou uma mensagem de erro
     if (resultado != -1) {
         printf("\nResultado: %.2lf\n", resultado);
     } else {
