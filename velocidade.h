@@ -152,7 +152,7 @@ void converterVelocidade() {
     printf("Digite a unidade de destino (1-3): ");
     scanf("%d", &unidadeDestino);
 
-    // Converter para m/s como base
+    // Converter para m/s como
     if (unidadeOrigem == 1) valor /= 3.6; // km/h -> m/s
     else if (unidadeOrigem == 3) valor *= 0.44704; // mph -> m/s
 
