@@ -7,8 +7,8 @@ void exibir_menu()
     printf("5. Decagrama (dag)\n6. Hectograma (hg)\n7. Quilograma(Kg)\n8. Tonelada(T)\n\n");
 }
 
-    //Caso inválido
 double converte_massa(double valor,int entrada,int saida){
+    
     if(entrada>=1 && saida>=1 && entrada<=8 && saida<=8 && valor>=0){//Validar Medidas
         int aux = saida - entrada;
         //Caso sejam a mesma medida na entrada e saida
@@ -39,8 +39,10 @@ double converte_massa(double valor,int entrada,int saida){
             return valor;
         } 
     }
+    //Caso inválido
     return -1;
 }
+
 int main(){
     double valor, resultado;
     int UnEntrada,UnSaida;
