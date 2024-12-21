@@ -60,7 +60,7 @@ void menuBits(){
     double valor;  // Alterando para double, já que estamos lidando com maior precisão
 
     do {
-        printf("=== Conversor de Tamanho de Arquivo ===\n");
+        printf("=== Conversor de unidades de dados ===\n");
         printf("Escolha a unidade de origem:\n");
         printf("1. Bytes\n2. Kilobytes (KB)\n3. Megabytes (MB)\n4. Gigabytes (GB)\n5. Terabytes (TB)\n");
         printf("=======================================\n");
