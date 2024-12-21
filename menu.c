@@ -2,7 +2,7 @@
 #include <math.h>
 #include <locale.h>
 #include "bits.h"
-#include "comprimento.h"
+#include "Comprimento.h"
 #include "area_converter.h"
 #include "massa.h"
 #include "Eletrica.h"
