@@ -68,9 +68,9 @@ void comprimentoconvert(int op1, float comp, int op2){
 }
 // Função para exibir o menu e obter as entradas do usuário
 void comprimentomenu(){
-    int op1, op2;
+    int op1, op2,rep;
     float comp;
-
+do{
     printf("=== Conversor de Comprimento ===\n");
     printf("Escolha a unidade de origem:\n");
     printf("1. Quilômetros\n2. Hectômetros\n3. Decâmetros\n4. Metros\n5. Decímetros\n6. Centímetros\n7. Milímetros\n");
@@ -87,5 +87,13 @@ void comprimentomenu(){
     scanf("%d", &op2);
 
     // Chama a função de conversão
+    printf("=======================================\n\n");
     comprimentoconvert(op1, comp, op2);
+    printf("=======================================\n\n");
+
+        // Perguntar se deseja continuar
+        printf("Digite 1 para realizar outra conversão ou 0 para sair: ");
+        scanf("%d", &rep);
+
+    } while (rep != 0);
 }

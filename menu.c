@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include <locale.h>
 #include "bits.h"
-#include "comprimento.h"
+#include "Comprimento.h"
 #include "area_converter.h"
 #include "massa.h"
 #include "Eletrica.h"
@@ -26,8 +27,9 @@ void exibirMenu() {
     printf("Escolha uma opção: ");
 }
 
-int main() {
-    setlocale(LC_ALL, ""); // Configura suporte para caracteres UTF-8
+int main(){
+    system("chcp 65001 > null");
+    setlocale(LC_ALL, "pt_BR.UTF-8"); // Configura suporte para caracteres UTF-8
     int opcao;
 
     do {
