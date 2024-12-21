@@ -1,13 +1,3 @@
-#include <stdio.h>
-#include "tela.h"
-
-void exibirMenu(){
-    
-    printf("1. km/h\n");
-    printf("2. m/s\n");
-    printf("3. mph\n");
-  
-}
 
 float converterVelocidade(float valor, int uniOrigem, int uniDestino) {
     
@@ -44,14 +34,15 @@ float converterVelocidade(float valor, int uniOrigem, int uniDestino) {
 }
 
 
-int main(){   
-
+void MenuVelocidade(){
     float valor, resultado;
     int unidadeOrigem, unidadeDestino;
 
     printf("=== Conversor de Velocidade ===\n");
     printf("Qual a unidade quer converter \n");
-    exibirMenu();
+    printf("1. km/h\n");
+    printf("2. m/s\n");
+    printf("3. mph\n");
     printf("Digite uma opcao: ");
     scanf("%d", &unidadeOrigem);
 
@@ -60,13 +51,14 @@ int main(){
 
 
     printf("Converter para? \n");
-    exibirMenu();
+    printf("1. km/h\n");
+    printf("2. m/s\n");
+    printf("3. mph\n");
     printf("Digite uma opcao: ");
     scanf("%d", &unidadeDestino);
 
     resultado = converterVelocidade(valor, unidadeOrigem, unidadeDestino);
 
     printf("Resultado: %.2f\n", resultado);
-    return 0;
-    
+
 }

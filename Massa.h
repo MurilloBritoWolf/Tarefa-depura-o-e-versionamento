@@ -1,12 +1,3 @@
-#include <stdio.h>
-#include <math.h>
-
-void exibir_menu()
-{
-    printf("\n1. Miligrama (mg)\n2. Centigrama (cg)\n3. Decigrama (dg)\n4. Grama (g)\n");
-    printf("5. Decagrama (dag)\n6. Hectograma (hg)\n7. Quilograma(Kg)\n8. Tonelada(T)\n\n");
-}
-
 double converte_massa(double valor,int entrada,int saida){
     
     if(entrada>=1 && saida>=1 && entrada<=8 && saida<=8 && valor>=0){//Validar Medidas
@@ -43,19 +34,21 @@ double converte_massa(double valor,int entrada,int saida){
     return -1;
 }
 
-int main(){
-    double valor, resultado;
+void Menu_massa(){
+        double valor, resultado;
     int UnEntrada,UnSaida;
 
         printf("\nEscolha a unidade de entrada\n");
-        exibir_menu();
+        printf("\n1. Miligrama (mg)\n2. Centigrama (cg)\n3. Decigrama (dg)\n4. Grama (g)\n");
+        printf("5. Decagrama (dag)\n6. Hectograma (hg)\n7. Quilograma(Kg)\n8. Tonelada(T)\n\n");
         scanf("%d",&UnEntrada);
 
         printf("\nInforme o valor que deseja converter:\n");
         scanf("%lf",&valor);
 
         printf("\nEscolha a unidade de saída\n");
-        exibir_menu();
+        printf("\n1. Miligrama (mg)\n2. Centigrama (cg)\n3. Decigrama (dg)\n4. Grama (g)\n");
+        printf("5. Decagrama (dag)\n6. Hectograma (hg)\n7. Quilograma(Kg)\n8. Tonelada(T)\n\n");
         scanf("%d",&UnSaida);
         
         resultado = converte_massa(valor,UnEntrada,UnSaida);

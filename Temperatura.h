@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "tela.h"
-#include <locale.h>
-
-
 // Função que exibe a unidade de temperatura de entrada
 int temp_entrada() {
     int t_entrada; //È necessario declarar o t_entrada aqui porque foi definida como uma variavel local na funçao main
@@ -91,7 +85,7 @@ float conv6 () {
     return t_fahrenheit; 
 }
 
-int main () {
+void MenuTemperatura () {
     int t_entrada, t_saida;
     float resultado;
 
@@ -163,5 +157,4 @@ int main () {
              printf("A conversao de Kelvin para Fahrenheit resultou em %.2f ºF\n",resultado);
 
     }
-    printf("Fim!!\n");
 }

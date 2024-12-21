@@ -1,41 +1,61 @@
 #include <stdio.h>
-#include "tela.h"
+#include <math.h>
+#include <locale.h>
+#include "bits.h"
+#include "comprimento.h"
+#include "area_converter.h"
+#include "massa.h"
+#include "Eletrica.h"
+#include "Tempo.h"
+#include "Temperatura.h"
+#include "Velocidade.h"
 
 void exibirMenu() {
-    printf("===== MENU PRINCIPAL =====\n");
+    printf("\n===== MENU PRINCIPAL =====\n");
     printf("1. Unidades de comprimento\n");
-    printf("2.Unidades de massa\n");
+    printf("2. Unidades de massa\n");
     printf("3. Unidades de volume\n");
-    printf("4.Unidades de temperatura\n");
+    printf("4. Unidades de temperatura\n");
     printf("5. Unidades de velocidade\n");
-    printf("6. Unidade de Eletrica\n");
+    printf("6. Unidades de elétrica\n");
     printf("7. Unidades de área\n");
     printf("8. Unidades de tempo\n");
-    printf("9. Unidade de Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
+    printf("9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)\n");
     printf("0. Sair\n");
     printf("==========================\n");
     printf("Escolha uma opção: ");
 }
 
 int main() {
+    setlocale(LC_ALL, ""); // Configura suporte para caracteres UTF-8
     int opcao;
 
     do {
         exibirMenu();
-        scanf("%d", &opcao);
+        
+        // Lê a entrada do usuário com validação
+        if (scanf("%d", &opcao) != 1) {
+            printf("Entrada inválida. Encerrando o programa.\n");
+            break;
+        }
 
         switch (opcao) {
-            case 1: Comprimento(); break;
-            case 2: Massa(); break;
-            case 3: Volume(); break;
-            case 4: Temperatura(); break;
-            case 5: Velocidade(); break;
-            case 6: Eletrica(); break;
-            case 7: Area(); break;
-            case 8: Tempo(); break;
-            case 9: Bits(); break;
-            case 0: printf("Saindo do programa...\n"); break;
-            default: printf("Opção inválida. Tente novamente.\n");
+            case 1: comprimentomenu(); break;
+            case 2: Menu_massa(); break;
+            case 3: 
+                printf("Conversor de volume em andamento.\n"); 
+                break;
+            case 4: MenuTemperatura(); break;
+            case 5: MenuVelocidade(); break;
+            case 6: Menu_eletrica(); break;
+            case 7: MenuArea(); break;
+            case 8: MenuTempo(); break;
+            case 9: menuBits(); break;
+            case 0: 
+                printf("Saindo do programa...\n"); 
+                break;
+            default: 
+                printf("Opção inválida. Tente novamente.\n");
         }
     } while (opcao != 0);
 

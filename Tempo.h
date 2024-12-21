@@ -1,9 +1,7 @@
 #ifndef TEMPO_H
 #define TEMPO_H
 
-#include <stdio.h>
-
-static void MenuTempo() { // Função inline para evitar múltiplas definições
+static void MenuTempo(){ 
     int fromUnit, toUnit;
     float value;
 

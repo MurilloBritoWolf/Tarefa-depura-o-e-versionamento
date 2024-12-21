@@ -1,8 +1,6 @@
 #ifndef AREA_CONVERTER_H
 #define AREA_CONVERTER_H
 
-#include <stdio.h>
-
 // Função que retorna a conversão de metros quadrados para centímetros quadrados
 static inline double metrosParaCentimetros(double metros) {
     return metros * 10000;

@@ -1,14 +1,3 @@
-#include <stdio.h>
-#include "tela.h"
-
-// Função que exibe o menu de opções para o usuário
-void exibirMenu() {
-    printf("Selecione a unidade de entrada:\n");
-    printf("1. Watts (W)\n");
-    printf("2. Quilowatts (kW)\n");
-    printf("3. Cavalos-vapor (cv ou hp)\n");
-    printf("Escolha: ");
-}
 
 // Função que realiza a conversão entre as unidades de potência
 double converterPotencia(double valor, int entrada, int saida) {
@@ -37,12 +26,16 @@ double converterPotencia(double valor, int entrada, int saida) {
     }
 }
 
-// Função principal onde o programa começa a execução
-int main() {
+// Função que exibe o menu de opções para o usuário
+void Menu_eletrica(){
     int unidadeEntrada, unidadeSaida;
     double valor, resultado;
 
-    exibirMenu(); // Exibe o menu para o usuário escolher a unidade de entrada
+    printf("Selecione a unidade de entrada:\n");
+    printf("1. Watts (W)\n");
+    printf("2. Quilowatts (kW)\n");
+    printf("3. Cavalos-vapor (cv ou hp)\n");
+    printf("Escolha: ");
     scanf("%d", &unidadeEntrada); // unidade de entrada
 
     printf("Digite o valor a ser convertido: ");
@@ -64,6 +57,5 @@ int main() {
     } else {
         printf("\nUnidade inválida selecionada.\n");
     }
-
-    return 0;
 }
+
