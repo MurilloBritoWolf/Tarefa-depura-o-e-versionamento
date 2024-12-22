@@ -13,7 +13,10 @@ const char* obter_unidade(int unidade) {
 }
 
 double converte_massa(double valor, int entrada, int saida) {
-    if (entrada >= 1 && saida >= 1 && entrada <= 8 && saida <= 8 && valor >= 0) { // Validar Medidas
+    if (entrada<1||entrada>8||saida<1||saida>8||valor<0) { // Validar Medidas
+        // Caso inválido
+        return -1;
+    }else{
         int aux = saida - entrada;
         // Caso sejam a mesma medida na entrada e saída
         if (aux == 0) {
@@ -43,8 +46,6 @@ double converte_massa(double valor, int entrada, int saida) {
             return valor;
         }
     }
-    // Caso inválido
-    return -1;
 }
 
 void Menu_massa() {
@@ -85,7 +86,7 @@ void Menu_massa() {
         // Chama a função para conversão de massa
         resultado = converte_massa(valor, UnEntrada, UnSaida);
         if (resultado != -1) {
-            printf("Resultado da conversão: %.2lf %s\n", resultado, obter_unidade(UnSaida));
+            printf("Resultado da conversão: %.3lf %s\n", resultado, obter_unidade(UnSaida));
         } else {
             printf("\nEntrada inválida!\n");
         }
