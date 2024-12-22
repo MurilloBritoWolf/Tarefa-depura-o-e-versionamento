@@ -4,7 +4,7 @@
 #include <locale.h>
 #include "bits.h"
 #include "Comprimento.h"
-#include "area_converter.h"
+#include "Area.h"
 #include "massa.h"
 #include "Eletrica.h"
 #include "Tempo.h"
