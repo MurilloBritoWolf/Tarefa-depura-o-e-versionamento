@@ -35,7 +35,7 @@ void converterVolume(double valor, char unidadeEntrada, char unidadeSaida) {
     }
 }
 
-int main() {
+int MenuVolume() {
     double valor;
     char unidadeEntrada, unidadeSaida;
 
