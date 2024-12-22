@@ -10,6 +10,7 @@
 #include "Tempo.h"
 #include "Temperatura.h"
 #include "Velocidade.h"
+#include "Volume.h"
 
 void exibirMenu() {
     printf("\n===== MENU PRINCIPAL =====\n");
@@ -44,9 +45,7 @@ int main(){
         switch (opcao) {
             case 1: comprimentomenu(); break;
             case 2: Menu_massa(); break;
-            case 3: 
-                printf("Conversor de volume em andamento.\n"); 
-                break;
+            case 3: MenuVolume();   break;
             case 4: MenuTemperatura(); break;
             case 5: MenuVelocidade(); break;
             case 6: Menu_eletrica(); break;
