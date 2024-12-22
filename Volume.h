@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 void converterVolume(double valor, char unidadeEntrada, char unidadeSaida) {
     double valorEmLitros;
