@@ -1,1 +1,83 @@
-Tarefa embarcatech - Atividade para a configuração de um projeto simples, permitindo a simulação de um fluxo de trabalho real com versionamento.
+──────────────────────────────────────────────────────────────────────
+                       TAREFA EMBARCATECH - CONVERSORES DE UNIDADES
+                               (SUB GRUPO 6)
+
+                        **Equipe do Projeto:**
+──────────────────────────────────────────────────────────────────────
+
+- João Murillo Brito Taveira (Líder da semana)  
+- Amanda Cardoso Lopes  
+- Lucas Pereira Céu  
+- Lucas Ricardo De Lima Figueiredo  
+- Matheus Leite Machado  
+- Vinícius Da Silva Barreto Dos Santos  
+- Wendel Souza Santos  
+- Francisco Miguel Meira Pessoa  
+
+──────────────────────────────────────────────────────────────────────
+                            OBJETIVO DO PROJETO
+──────────────────────────────────────────────────────────────────────
+
+O projeto tem como objetivo a criação de um sistema simples, porém eficaz, 
+para realizar conversões entre diferentes unidades de medida. Este sistema foi 
+desenvolvido com o propósito de simular um fluxo de trabalho real com versionamento,
+utilizando Git como ferramenta para controle de versões. O foco principal é a criação
+de conversores interativos, com uma interface intuitiva para o usuário, permitindo a 
+conversão entre diversas unidades de medida de forma prática e rápida.
+
+──────────────────────────────────────────────────────────────────────
+                        FUNCIONALIDADES DO PROJETO
+──────────────────────────────────────────────────────────────────────
+
+O programa oferece um conjunto de conversores para as seguintes unidades de medida:
+
+- Unidades de Comprimento  
+- Unidades de Massa  
+- Unidades de Volume  
+- Unidades de Temperatura  
+- Unidades de Velocidade  
+- Unidades Elétricas  
+- Unidades de Área  
+- Unidades de Tempo  
+- Bits, Bytes e Outras Unidades de Dados  
+
+
+──────────────────────────────────────────────────────────────────────
+                        ESTRUTURA DO PROGRAMA
+──────────────────────────────────────────────────────────────────────
+
+A estrutura do programa segue um modelo modular, com funções dedicadas
+ a cada tipo de conversão. O fluxo do programa é organizado da seguinte forma:
+
+1. Menu: O usuário é apresentado a um menu com as opções
+de conversão, permitindo a escolha rápida e prática.
+
+2. Funções de Conversão: Cada categoria de unidades (como comprimento, massa,
+volume, etc.) possui uma função específica responsável por realizar as conversões.
+
+3. Execução e Resultado: Após selecionar a conversão desejada, o programa
+executa a conversão e apresenta o resultado de forma clara para o usuário.
+
+4. Repetição: O usuário pode realizar quantas conversões desejar, basta selecionar 
+a opção desejada no menu. Para finalizar, basta digitar "0" para fechar o programa.
+
+
+──────────────────────────────────────────────────────────────────────
+                              CONCLUSÃO
+──────────────────────────────────────────────────────────────────────
+
+Este projeto oferece uma maneira prática e eficiente de realizar conversões entre
+diferentes unidades de medida. Sua estrutura modular facilita a inclusão de novas
+funcionalidades, permitindo expansão futura com facilidade. Além disso, o controle
+de versões com Git garante uma gestão eficaz das alterações, tornando o trabalho em
+equipe mais organizado e colaborativo.
+
+A aplicação dos conceitos de versionamento não apenas facilita a manutenção do código,
+mas também aprimora a colaboração entre os membros da equipe, garantindo que todas as
+ alterações sejam devidamente documentadas e controladas.
+
+──────────────────────────────────────────────────────────────────────
+                       EQUIPE DO PROJETO TAREFA EMBARCATECH
+                           CONVERSORES DE UNIDADES
+                                Subgrupo 6
+──────────────────────────────────────────────────────────────────────
