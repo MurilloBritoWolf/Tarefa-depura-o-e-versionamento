@@ -37,6 +37,9 @@ void converterVolume(double valor, char unidadeEntrada, char unidadeSaida) {
 int MenuVolume() {
     double valor;
     char unidadeEntrada, unidadeSaida;
+    int rep;
+
+    do {
 
     printf("Digite o valor a ser convertido: ");
     scanf("%lf", &valor);
@@ -47,7 +50,15 @@ int MenuVolume() {
     printf("Digite a unidade de saída (L - Litros, m - Mililitros, M - Metros cúbicos): ");
     scanf(" %c", &unidadeSaida);
 
+   printf("=======================================\n");
     converterVolume(valor, unidadeEntrada, unidadeSaida);
+    printf("=======================================\n\n");
+
+     // Perguntar se deseja continuar
+    printf("Digite 1 para realizar outra conversão ou 0 para sair: ");
+    scanf("%d", &rep);
+
+    } while (rep != 0);
 
     return 0;
 }

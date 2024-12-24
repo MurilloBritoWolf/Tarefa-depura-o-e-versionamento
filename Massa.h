@@ -16,7 +16,8 @@ double converte_massa(double valor, int entrada, int saida) {
     if (entrada<1||entrada>8||saida<1||saida>8||valor<0) { // Validar Medidas
         // Caso inválido
         return -1;
-    }else{
+    }
+    else{
         int aux = saida - entrada;
         // Caso sejam a mesma medida na entrada e saída
         if (aux == 0) {
@@ -43,9 +44,10 @@ double converte_massa(double valor, int entrada, int saida) {
         if (aux < 0) {
             aux = aux * (-1);
             valor = valor * pow(10, aux);
-            return valor;
+
         }
     }
+ return valor;
 }
 
 void Menu_massa() {
